@@ -40,15 +40,14 @@ body {
 	overflow-x: hidden;
 }
 
-/* USER STYLES */
-
-.image {
-	max-width: 100%;
-	margin-bottom: var(--bs-gutter-x);
-	border-radius: 4px;
+body, html {
+	height: 100%;
 }
 
-.accent {
-	color: var(--accent);
-	font-weight: bold;
+.showcase {
+	background-color: #000;
+	height: 100%;
+	position: relative;
+	color: #fff;
+	overflow: hidden;
 }
