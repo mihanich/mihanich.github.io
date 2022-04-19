@@ -210,18 +210,17 @@ body, html {
 	right: 0;
 }
 .showcase-navigation > *::before {
-	content: '?';
-	font-family: 'Franklin Gothic Medium';
-	opacity: 0;
+	content: '⇧';
+	opacity: .1;
 	transition: opacity .75s ease-out;
 	position: absolute;
 	transform: rotate(-90deg);
 	left: 50px;
-	top: 50px;
+	top: 35%;
 	font-size: 45px;
 }
 .showcase-navigation > *:hover::before {
-	opacity: .4;
+	opacity: .6;
 }
 .showcase-navigation__next::before{
 	transform: rotate(90deg);
