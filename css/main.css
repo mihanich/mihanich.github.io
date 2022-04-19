@@ -218,7 +218,7 @@ body, html {
 		transform: rotateY(deg) scaleX(1);
 	}
 }
-@keyframes k-left-side {
+@keyframes k-right-side {
 	0% {
 		transform: rotateY(0deg) scaleX(1);
 	}
