@@ -121,6 +121,9 @@ body, html {
 .showcase__header span {
 	color: var(--accent);
 }
+.showcase-carousel .swiper-wrapper {
+	transition: var(--transition);
+}
 .showcase-carousel__item {
 	position: relative;
 	height: calc(100vh - var(--padding)*2);
@@ -185,6 +188,49 @@ body, html {
 	animation-direction: alternate;
 }
 
+/*Navigation*/
+
+.showcase-navigation {
+	overflow: hidden;
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.showcase-navigation > * {
+	position: absolute;
+	height: 100%;
+	width: 50%;
+	outline: none;
+	cursor: pointer;
+}
+.showcase-navigation__next {
+	right: 0;
+}
+.showcase-navigation > *::before {
+	content: '?';
+	font-family: 'Franklin Gothic Medium';
+	opacity: 0;
+	transition: opacity .75s ease-out;
+	position: absolute;
+	transform: rotate(-90deg);
+	left: 50px;
+	top: 50px;
+	font-size: 45px;
+}
+.showcase-navigation > *:hover::before {
+	opacity: .4;
+}
+.showcase-navigation__next::before{
+	transform: rotate(90deg);
+	right: 50px;
+	left: auto;
+}
+.showcase-navigation > *.swiper-button-disabled {
+	display: none;
+}
 
 /*ANIMATIONS*/
 @keyframes k-light {
