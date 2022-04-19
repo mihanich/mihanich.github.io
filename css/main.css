@@ -180,6 +180,11 @@ body, html {
 	animation: k-left-side 2s ease-in-out infinite;
 	animation-direction: alternate;
 }
+.showcase-carousel__image-right .showcase-carousel__image {
+	animation: k-right-side 2s ease-in-out infinite;
+	animation-direction: alternate;
+}
+
 
 /*ANIMATIONS*/
 @keyframes k-light {
@@ -211,5 +216,13 @@ body, html {
 	}
 	100% {
 		transform: rotateY(deg) scaleX(1);
+	}
+}
+@keyframes k-left-side {
+	0% {
+		transform: rotateY(0deg) scaleX(1);
+	}
+	100% {
+		transform: rotateY(-1deg) scaleX(.92);
 	}
 }
