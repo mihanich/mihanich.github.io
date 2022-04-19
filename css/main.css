@@ -167,6 +167,19 @@ body, html {
 	background-position: center;
 	background-repeat: no-repeat;
 }
+.showcase-carousel__image-left {
+	perspective-origin: left center;
+	clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}
+.showcase-carousel__image-right {
+	perspective-origin: right center;
+	clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+}
+
+.showcase-carousel__image-left .showcase-carousel__image {
+	animation: k-left-side 2s ease-in-out infinite;
+	animation-direction: alternate;
+}
 
 /*ANIMATIONS*/
 @keyframes k-light {
@@ -189,5 +202,14 @@ body, html {
 	}
 	100% {
 		opacity: .6;
+	}
+}
+
+@keyframes k-left-side {
+	0% {
+		transform: rotateY(-1deg) scaleX(.92);
+	}
+	100% {
+		transform: rotateY(deg) scaleX(1);
 	}
 }
